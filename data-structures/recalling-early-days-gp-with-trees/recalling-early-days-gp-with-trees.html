@@ -1,0 +1,84 @@
+<html><body><div style="display: block;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgb(250, 250, 250);
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+            width: 90%;
+            position: relative;
+            transition: all 5s ease-in-out;"><div class="challenge-body-html"><div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p><a href="https://hr-testcases.s3.amazonaws.com/959/959-chinese.md">Chinese Version</a><br><a href="https://hr-testcases.s3.amazonaws.com/959/959_rus.md">Russian Version</a><br></p>
+
+<p>You are given a <a href="http://en.wikipedia.org/wiki/Tree_%28graph_theory%29">tree</a> with N nodes and each has a value associated with it. You are given Q queries, each of which is either an update or a retrieval operation. </p>
+
+<p>The <strong>update query</strong> is of the format</p>
+
+<pre><code>i j X
+</code></pre>
+
+<p>This means you'd have to add a <a href="http://en.wikipedia.org/wiki/Geometric_progression">GP</a> series to the nodes which lie in the path from node <code>i</code> to node <code>j</code> (both inclusive) with first term of the GP as <code>X</code> on node <code>i</code> and the common ratio as <code>R</code> (given in the input)</p>
+
+<p>The <strong>retrieval</strong> query is of the format</p>
+
+<p>i j</p>
+
+<p>You need to return the sum of the node values (S) lying in the path from node i to node j modulo 100711433. </p>
+
+<p><strong>Input Format</strong> <br>
+The first line contains two integers (N and R respectively) separated by a space. <br>
+In the next N-1 lines, the i<sup>th</sup> line describes the i<sup>th</sup> edge: a line with two integers a b separated by a single space denotes an edge between a, b. <br>
+The next line contains 2 space separated integers (U and Q respectively) representing the number of Update and Query operations to follow. <br>
+U lines follow. Each of the next U lines contains 3 space separated integers (i,j, and X respectively). <br>
+Each of the next Q lines contains 2 space separated integers, i and j respectively. </p>
+
+<p><strong>Output Format</strong> <br>
+It contains exactly Q lines and each line containing the answer of the i<sup>th</sup> query.</p>
+
+<p><strong>Constraints</strong></p>
+
+<p>2 &lt;= N &lt;= 100000 <br>
+2 &lt;= R &lt;= 10<sup>9</sup><br>
+1 &lt;= U &lt;= 100000 <br>
+1 &lt;= Q &lt;= 100000 <br>
+1 &lt;= X &lt;= 10 <br>
+1 &lt;= a, b, i, j &lt;= N  </p>
+
+<p><strong>Sample Input</strong>  </p>
+
+<pre><code>6 2
+1 2
+1 4
+2 6
+4 5
+4 3
+2 2
+1 6 3
+5 3 5
+6 4
+5 1
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>31
+18
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<p>The node values after the first updation becomes :  </p>
+
+<pre><code>3 6 0 0 0 12  
+</code></pre>
+
+<p>The node values after second updation becomes :  </p>
+
+<pre><code>3 6 20 10 5 12  
+</code></pre>
+
+<p>Answer to Query #1: 12 + 6 + 3 + 10 = 31 <br>
+Answer to Query #2: 5 + 10 +3 = 18  </p></div></div></div></div></div></body></html>

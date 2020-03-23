@@ -1,0 +1,77 @@
+<html><body><div style="display: block;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgb(250, 250, 250);
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+            width: 90%;
+            position: relative;
+            transition: all 5s ease-in-out;"><div class="challenge-body-html"><div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>A subsequence of a sequence is a sequence which is obtained by deleting zero or more elements from the sequence.&nbsp;</p>
+
+<p>You are given a sequence <code>A</code> in which every element is a pair of integers &nbsp;i.e &nbsp;<code>A</code> = <em>[(a<sub>1</sub>, w<sub>1</sub>), (a<sub>2</sub>, w<sub>2</sub>),..., (a<sub>N</sub>, w<sub>N</sub>)]</em>.</p>
+
+<p>For a subseqence <code>B</code> = <em>[(b<sub>1</sub>, v<sub>1</sub>), (b<sub>2</sub>, v<sub>2</sub>), ...., (b<sub>M</sub>, v<sub>M</sub>)]</em> of the given sequence :&nbsp;</p>
+
+<ul><li>We call it increasing if for every <em>i</em> (1 &lt;= <em>i</em> &lt; <em>M</em> ) , <em>b<sub>i</sub> &lt; b<sub>i+1</sub></em>.</li>
+<li><em>Weight(B) = v<sub>1</sub> + v<sub>2</sub> + ... + v<sub>M</sub></em>.  </li>
+</ul><p><strong>Task:</strong> <br>
+Given a sequence, output the maximum weight formed by an increasing subsequence.</p>
+
+<p><strong>Input:</strong> <br>
+The first line of input contains a single integer <em>T</em>. <em>T</em> test-cases follow. The first line of each test-case contains an integer <em>N</em>. The next line contains <em>a<sub>1</sub>, a<sub>2</sub> ,... , a<sub>N</sub></em>&nbsp;separated by a single space. The next line contains <em>w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>N</sub></em>&nbsp;separated by a single space.</p>
+
+<p><strong>Output:</strong> <br>
+For each test-case output a single integer: The maximum weight of increasing subsequences of the given sequence.  </p>
+
+<p><strong>Constraints:</strong> <br>
+1 &lt;= <em>T</em> &lt;= 5 <br>
+1 &lt;= <em>N</em> &lt;= 150000 <br>
+1 &lt;= <em>a<sub>i</sub></em> &lt;= 10<sup>9</sup>, where <em>i &isin; [1..N]</em> <br>
+1 &lt;= <em>w<sub>i</sub></em> &lt;= 10<sup>9</sup>, where <em>i &isin; [1..N]</em>  </p>
+
+<p><strong>Sample Input:</strong></p>
+
+<pre><code>2  
+4  
+1 2 3 4  
+10 20 30 40  
+8  
+1 2 3 4 1 2 3 4  
+10 20 30 40 15 15 15 50
+</code></pre>
+
+<p><strong>Sample Output:</strong></p>
+
+<pre><code>100  
+110
+</code></pre>
+
+<p><strong>Explanation:</strong> <br>
+In the first sequence, the maximum size increasing subsequence is 4, and there's only one of them. We choose <code>B = [(1, 10), (2, 20), (3, 30), (4, 40)]</code>, and we have <code>Weight(B) = 100</code>.</p>
+
+<p>In the second sequence, the maximum size increasing subsequence is still 4, but there are now 5 possible subsequences:</p>
+
+<pre><code>1 2 3 4  
+10 20 30 40
+
+1 2 3 4  
+10 20 30 50
+
+1 2 3 4  
+10 20 15 50
+
+1 2 3 4  
+10 15 15 50
+
+1 2 3 4  
+15 15 15 50
+</code></pre>
+
+<p>Of those, the one with the greatest weight is <code>B = [(1, 10), (2, 20), (3, 30), (4, 50)]</code>, with <code>Weight(B) = 110</code>.</p>
+
+<p>Please note that this is not the maximum weight generated from picking the highest value element of each index. That value, 115, comes from&nbsp;[(1, 15), (2, 20), (3, 30), (4, 50)], which is not a valid subsequence because it cannot be created by only deleting elements in the original sequence.</p></div></div></div></div></div></body></html>

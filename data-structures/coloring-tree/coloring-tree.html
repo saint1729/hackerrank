@@ -1,0 +1,60 @@
+<html><body><div style="display: block;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgb(250, 250, 250);
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+            width: 90%;
+            position: relative;
+            transition: all 5s ease-in-out;"><div class="challenge-body-html"><div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>You are given a tree with <strong>N</strong> nodes with every node being colored. A color is represented by an integer ranging from 1 to 10<sup>9</sup>. Can you find the number of distinct colors available in a subtree rooted at the node <strong>s</strong>? </p>
+
+<p><strong>Input Format</strong> <br>
+The first line contains three space separated integers representing the number of nodes in the tree (<strong>N</strong>), number of queries to answer (<strong>M</strong>) and the root of the tree. </p>
+
+<p>In each of the next N-1 lines, there are two space separated integers(a b) representing an edge from node a to Node b and vice-versa.   </p>
+
+<p>N lines follow: N+i<sup>th</sup> line contains the color of the i<sup>th</sup> node.</p>
+
+<p>M lines follow: Each line containg a single integer s.</p>
+
+<p><strong>Output Format</strong> <br>
+Output exactly M lines, each line containing the output of the i<sub>th</sub> query.</p>
+
+<p><strong>Constraints</strong> <br>
+0 &lt;= M &lt;= 10<sup>5</sup><br>
+1 &lt;= N &lt;= 10<sup>5</sup><br>
+1 &lt;= root &lt;= N<br>
+1 &lt;= color of the Node &lt;= 10<sup>9</sup><br></p>
+
+<p><strong>Example</strong></p>
+
+<p><strong>Sample Input</strong></p>
+
+<pre><code>4 2 1
+1 2
+2 4
+2 3
+10
+20
+20
+30
+1
+2
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>3
+2
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<p>Query 1-Subtree rooted at 1 is the entire tree and colors used are 10 20 20 30 , so the answer is 3(10,20 and 30)</p>
+
+<p>Query 2-Subtree rooted at 2 contains color 20 20 30, so the answer is 2(20 and 30)</p></div></div></div></div></div></body></html>

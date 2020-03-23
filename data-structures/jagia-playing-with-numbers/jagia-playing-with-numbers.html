@@ -1,0 +1,97 @@
+<html><body><div style="display: block;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgb(250, 250, 250);
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+            width: 90%;
+            position: relative;
+            transition: all 5s ease-in-out;"><div class="challenge-body-html"><div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>Jaggu is a little kid and he likes playing with water balloons. He took 1 million ( 10<sup>6</sup> ) empty buckets and he filled the bucket with water balloons under the instruction of his sister Ishika. <br>
+His sister gives him two types of commands:<br></p>
+
+<p><code>R pos1 pos2</code> which implies that jaggu needs to tell her what is the total number of water balloons in the bucket from pos1 to pos2 (both included).</p>
+
+<p><code>U pos M plus</code> which implies that he has to work like the function </p>
+
+<p>Update(pos,M,plus)</p>
+
+<pre><code>void Update(int pos,int M,int plus)
+{
+    int N=1000000;  //1 million
+    for (int i=1;i&lt;=50;i++)
+    {
+        int back = pos
+        for(int j=1;j&lt;=1000;j++)
+        {
+            add M water ballons at bucket pos
+            int s,in=__builtin_popcount(pos);
+            for(int k=0;;k++)
+            {
+                s=pos+pow(2,k)
+                if( __builtin_popcount(s) &lt;= in )
+                {
+                    in = __builtin_popcount(s)
+                    pos = s;
+                    if(pos&gt;N)       break;
+                    add M water ballons at bucket pos
+                }
+            }
+            pos = pos - N
+        }
+        pos = back+plus;
+        if(pos&gt;N) pos-=N;
+    }
+}
+</code></pre>
+
+<p>Jaggu is too lazy to put the water ballons in the bucket. Afraid that he might be caught for not doing what his sister told him to do so, he asks your help to provide correct answers  for each of his sister's query. .</p>
+
+<p><strong>Input Format</strong></p>
+
+<p>First line contains Q, number of queries to follow.</p>
+
+<p>Next Q line follows , which can be either an Update Query or Report Query.Each Update Query is followed by atleast 1 report query.</p>
+
+<p><strong>Output Format</strong></p>
+
+<p>For each report query , output the answer in a separate line.</p>
+
+<p><strong>Constraints</strong></p>
+
+<p>1 &le; Q &le; 2 * 10<sup>5</sup></p>
+
+<p>1 &le; pos1,pos2,pos &le; 10<sup>6</sup></p>
+
+<p>pos1 &le; pos2</p>
+
+<p>1 &le; M &le; 10</p>
+
+<p>1 &le; plus &le; 999999</p>
+
+<p><strong>Sample Input</strong></p>
+
+<pre><code>2
+U 692778 7 291188
+R 636916 747794
+</code></pre>
+
+<p><strong>Sample Output</strong></p>
+
+<pre><code>378 
+</code></pre>
+
+<p><strong>Explanation</strong></p>
+
+<p>Follow the code above to get the answer.</p>
+
+<p><strong>Note</strong> </p>
+
+<ol><li><p>Input is randomly generated.</p></li>
+<li><p>__builtin_popcount(x) gives the number of set bits in binary representation of x.</p></li>
+<li><p>pow(2,k) denotes 2 raised to k , i.e. exponentiation of 2.</p></li>
+</ol><p>Timelimit is 3 times the timelimit mentioned <a href="https://www.hackerrank.com/environment">here</a></p></div></div></div></div></div></body></html>

@@ -1,0 +1,117 @@
+<html><body><div style="display: block;
+            margin: 100px auto;
+            padding: 30px;
+            background: rgb(250, 250, 250);
+            box-shadow: 0 6px 16px 0 rgba(0,0,0,.2);
+            width: 90%;
+            position: relative;
+            transition: all 5s ease-in-out;"><div class="challenge-body-html"><div class="challenge_problem_statement"><div class="msB challenge_problem_statement_body"><div class="hackdown-content"><style id="MathJax_SVG_styles">.MathJax_SVG_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax_SVG .MJX-monospace {font-family: monospace}
+.MathJax_SVG .MJX-sans-serif {font-family: sans-serif}
+.MathJax_SVG {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax_SVG * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.mjx-svg-href {fill: blue; stroke: blue}
+</style><svg style="display: none;"><defs id="MathJax_SVG_glyphs"></defs></svg><p>Consider a binary search tree <em>T</em> which is initially empty. Also, consider the first <code>N</code> positive integers {1, 2, 3, 4, 5, ....., N} and its permutation P {<em>a</em><sub>1</sub>, <em>a</em><sub>2</sub>, ..., <em>a</em><sub>N</sub>}. </p>
+
+<p>If we start adding these numbers to the binary search tree <em>T</em>, starting from <em>a</em><sub>1</sub>, continuing with <em>a</em><sub>2</sub>, ... (and so on) ..., ending with <em>a</em><sub>N</sub>. After every addition we ask you to output the sum of distances between every pair of <em>T</em>'s nodes.</p>
+
+<p><strong>Input Format</strong> <br>
+The first line of the input consists of the single integer <strong>N</strong>, the size of the list. <br>
+The second line of the input contains <strong>N</strong> single space separated numbers the permutation <em>a</em><sub>1</sub>, <em>a</em><sub>2</sub>, ..., <em>a</em><sub>N</sub> itself.</p>
+
+<p><strong>Constraints</strong> <br>
+1 &le; <em>N</em> &le; 250000  </p>
+
+<p><strong>Output Format</strong> <br>
+Output <em>N</em> lines. <br>
+On the <em>i</em><sup>th</sup> line output the sum of distances between every pair of nodes after adding the first <em>i</em> numbers from the permutation to the binary search tree <em>T</em>  </p>
+
+<p><strong>Sample Input #00</strong></p>
+
+<pre><code>8
+4 7 3 1 8 2 6 5
+</code></pre>
+
+<p><strong>Sample Output #00</strong></p>
+
+<pre><code>0
+1
+4
+10
+20
+35
+52
+76
+</code></pre>
+
+<p><strong>Explanation #00</strong>  </p>
+
+<p>After adding the first element, the distance is <code>0</code> as there is only 1 element </p>
+
+<pre><code>4
+</code></pre>
+
+<p>After adding the second element, the distance between 2 nodes is <code>1</code>.  </p>
+
+<pre><code>4
+ \
+  7
+</code></pre>
+
+<p>After adding the third element, the distance between every pair of elements is <code>2+1+1=4</code></p>
+
+<pre><code>  4
+ / \
+3   7    
+</code></pre>
+
+<p>After adding the fourth element, the distance between every pair of elements is <code>3 + 2 + 1 + 2 + 1 + 1 = 10</code></p>
+
+<pre><code>    4
+   / \
+  3   7    
+ /
+1
+</code></pre>
+
+<p>After adding the fifth element, the distance between every pair of elements is <code>4 + 3 + 2 + 1 + 3 + 2 + 1 + 2 + 1 + 1 = 20</code></p>
+
+<pre><code>    4
+   / \
+  3   7    
+ /     \
+1       8
+</code></pre>
+
+<p>After adding the sixth element, the distance between every pair of elements is <code>5 + 4 + 3 + 2 + 1 + 4 + 3 + 2 + 1 + 3 + 2 + 1 + 2 + 1 + 1 = 35</code></p>
+
+<pre><code>    4
+   / \
+  3   7    
+ /     \
+1       8
+ \
+  2
+</code></pre>
+
+<p>After adding the seventh element, the distance between every pair of elements is <code>5+5+4+3+2+1+4+4+3+2+1+3+3+2+1+2+2+1+1+1+2=52</code></p>
+
+<pre><code>    4
+   / \
+  3   7    
+ /   / \
+1   6   8
+ \
+  2
+</code></pre>
+
+<p>After adding the final element, the distance between every pair of elements is <code>6+5+5+4+3+2+1+5+4+4+3+2+1+4+3+3+2+1+3+2+2+1+2+1+1+2+1+3=76</code></p>
+
+<pre><code>        4
+      /   \
+    3      7   
+  /      /   \
+ 1      6     8
+  \    /
+   2  5
+</code></pre></div></div></div></div></div></body></html>
