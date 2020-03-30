@@ -1,4 +1,5 @@
 rootProject.name = 'hackerrank'
-include(':java-javadatatypes')
+include 'java-javadatatypes'
 include 'test'
+include 'submission'
 
