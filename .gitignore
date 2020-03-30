@@ -2,3 +2,4 @@
 /hackerrank.iml
 /out
 /.gradle
+**/build/**
