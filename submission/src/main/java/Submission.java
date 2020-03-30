@@ -49,10 +49,11 @@ public class Submission {
         String domain = "java";
         String slug = "java-datatypes";/**/
 
-        String refinedSlug = trimSlug(slug);
-        String moduleName = domain + DELIMITER + refinedSlug;
+//        String refinedSlug = trimSlug(slug);
+        String moduleName = domain + FORWARD_SLASH + slug;
 
-        String fileName = System.getProperty("user.dir") + FORWARD_SLASH + moduleName + JAVA_SRC_DIR + SOLUTION_FILE_NAME;
+        String fileName = System.getProperty("user.dir") + FORWARD_SLASH + moduleName
+                + FORWARD_SLASH + JAVA_SRC_DIR + FORWARD_SLASH + SOLUTION_FILE_NAME;
 
         String code = new String(Files.readAllBytes(Paths.get(fileName)), StandardCharsets.UTF_8);
         JSONObject jsonObject = new JSONObject();
