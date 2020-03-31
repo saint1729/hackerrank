@@ -53,12 +53,12 @@ public class SolutionTest {
     @Test
     public void test() throws IOException {
 
-        String TEST_CASE_NUMBER = "00";
+        String TEST_CASE_NUMBER = "01";
 
-        final String testString = "input" + TEST_CASE_NUMBER + ".txt";
+        final String testString = "./src/test/resources/input/input" + TEST_CASE_NUMBER + ".txt";
         provideInput(testString);
         Solution.main(new String[0]);
-        String outputFromFile = outputAsString("output" + TEST_CASE_NUMBER + ".txt");
+        String outputFromFile = outputAsString("./src/test/resources/output/output" + TEST_CASE_NUMBER + ".txt");
         String outputFromMain = getOutput();
 
         assertEquals(outputFromFile, outputFromMain); // .substring(0, outputFromMain.length() - 1));

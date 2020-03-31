@@ -5,3 +5,4 @@ rootProject.name = 'hackerrank'
 
 include ':submission'
 include ':java:java-datatypes'
+include ':java:java-end-of-file'

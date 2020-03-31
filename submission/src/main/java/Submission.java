@@ -28,7 +28,7 @@ public class Submission {
         String slug = scanner.next();/**/
 
         String domain = "java";
-        String slug = "java-datatypes";/**/
+        String slug = "java-end-of-file";/**/
 
         String moduleName = domain + FORWARD_SLASH + slug;
 
