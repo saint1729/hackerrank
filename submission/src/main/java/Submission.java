@@ -50,7 +50,7 @@ public class Submission {
         String slug = "java-datatypes";/**/
 
 //        String refinedSlug = trimSlug(slug);
-        String moduleName = domain + FORWARD_SLASH + slug;
+        String moduleName = domain + FORWARD_SLASH + slug + "-old";
 
         String fileName = System.getProperty("user.dir") + FORWARD_SLASH + moduleName
                 + FORWARD_SLASH + JAVA_SRC_DIR + FORWARD_SLASH + SOLUTION_FILE_NAME;
