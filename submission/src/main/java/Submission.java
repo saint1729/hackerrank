@@ -23,25 +23,6 @@ public class Submission {
 
     public static void main(String[] args) throws IOException, JSONException {
 
-
-
-//        String code = "import java.util.*;\nimport java.io.*;\n\n\n\nclass Solution" +
-//                "{\n    public static void main(String []argh)\n    {\n\n\n\n        " +
-//                "Scanner sc = new Scanner(System.in);\n        int t=sc.nextInt();\n\n" +
-//                "        for(int i=0;i<t;i++)\n        {\n\n            try\n            " +
-//                "{\n                long x=sc.nextLong();\n                " +
-//                "System.out.println(x+\" can be fitted in:\");\n                " +
-//                "if(x>=-128 && x<=127) {\n                    System.out.println(\"* byte\");\n" +
-//                "                }\n                if((x >= -32768) && (x < 32768)) {\n" +
-//                "                    System.out.println(\"* short\");\n                }\n" +
-//                "                if((x >= -2147483648) && (x <= 2147483647)) {\n" +
-//                "                    System.out.println(\"* int\");\n                }\n" +
-//                "                System.out.println(\"* long\");\n            }\n            " +
-//                "catch(Exception e)\n            {\n                System.out.println(sc.next()" +
-//                "+\" can't be fitted anywhere.\");\n            }\n\n        }\n    }\n}\n\n\n\n\n";
-
-
-
         /*Scanner scanner = new Scanner(System.in);
         String domain = scanner.next();
         String slug = scanner.next();/**/
@@ -49,8 +30,7 @@ public class Submission {
         String domain = "java";
         String slug = "java-datatypes";/**/
 
-//        String refinedSlug = trimSlug(slug);
-        String moduleName = domain + FORWARD_SLASH + slug + "-old";
+        String moduleName = domain + FORWARD_SLASH + slug;
 
         String fileName = System.getProperty("user.dir") + FORWARD_SLASH + moduleName
                 + FORWARD_SLASH + JAVA_SRC_DIR + FORWARD_SLASH + SOLUTION_FILE_NAME;
