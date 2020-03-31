@@ -1,6 +1,7 @@
 rootProject.name = 'hackerrank'
-include ':java-javadatatypes'
-include ':test'
-include ':submission'
-include ':java:java-datatypes-old'
+//include ':java-javadatatypes'
+//include ':test'
+//include ':java:java-datatypes-old'
 
+include ':submission'
+include ':java:java-datatypes'
