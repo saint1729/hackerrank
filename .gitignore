@@ -3,3 +3,6 @@
 /out
 /.gradle
 **/build/**
+__pycache__/
+.venv/
+.env
